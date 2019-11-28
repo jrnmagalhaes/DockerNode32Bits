@@ -1,6 +1,5 @@
-FROM node:10-slim
 #for 32 bits
-#FROM i386/node:10-slim
+FROM i386/node:10-slim
 
 # Create app directory
 WORKDIR /usr/src/app
