@@ -7,20 +7,14 @@ P.S.: The real NodeJS service is not here.
 
 ## Setup
 
-1. Build the image:
+1. Give permission to the setup script
 
 ```bash
-docker build -t jrnmagalhaes/dockertest .
+chmod +x setup.sh
 ```
 
-2. Create a temporary enviroment variable to store host's ip.
+2. Run the script
 
 ```bash
-HOSTIP=`ip -4 addr show scope global dev docker0 | grep inet | awk '{print \$2}' | cut -d / -f 1`
-```
-
-3. Run the container
-
-```bash
-docker run --add-host=hostmachine:${HOSTIP} -p 3000:3000 -d jrnmagalhaes/dockertest
+./setup.sh
 ```
